@@ -1,0 +1,77 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+   <title>Registration Form</title>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+ </head>
+ <body>
+ 
+    <h1><center>Registration Form </center></h1>
+    <br>
+    <div class="container">
+    <div class="row">
+    <div class="col-md-10">
+    <form class="form-horizontal"  method="POST" enctype="multipart/form-data">
+
+            <div class="form-group">
+                <label class="control-label col-sm-2" for="name">Name:</label>
+                <div class="col-sm-10">
+                  <input type="name" class="form-control" placeholder="Enter Name" name="name">
+                </div>
+              </div>
+
+            <div class="form-group">
+            <label class="control-label col-sm-2" for="email">Email:</label>
+            <div class="col-sm-10">
+              <input type="email" class="form-control" placeholder="Enter email" name="email">
+            </div>
+          </div>
+         
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="password">Password:</label>
+            <div class="col-sm-10">          
+              <input type="password" class="form-control" placeholder="Enter password" name="password">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="control-label col-sm-2" for="image">Image:</label>
+            <div class="col-sm-10">          
+              <input type="file" class="form-control"name="image">
+            </div>
+          </div>
+         
+         
+         
+          <div class="form-group">        
+            <div class="col-sm-offset-2 col-sm-10">
+              <input type="submit" class="btn btn-default" value="submit">
+            </div>
+          </div>
+         
+          <% 
+          if (typeof message !== 'undefined') { %>
+              <h2 style="color:green ;"><%= message %></h2>
+            
+              <% }
+          %>
+        
+        </form>
+      </div>
+
+</div>
+<a class="btn btn-primary" style="margin-top: 15px;" href="/user/login">Already Have An Account </a>
+<a class="btn btn-primary pull-right" href="/user/list">User List</a>
+
+</div>
+
+</body>
+</html>
+
+
+
